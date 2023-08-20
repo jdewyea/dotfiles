@@ -170,8 +170,14 @@ defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 chflags nohidden ~/Library
 
 ###############################################################################
-# Dock, Dashboard, and hot corners                                            #
+# Dock, Dashboard, Menu Bar and hot corners                                   #
 ###############################################################################
+
+# Display seconds in menu bar clock
+defaults write com.apple.menuextra.clock ShowSeconds -bool true
+
+# Show battery percentage in menu bar
+defaults write com.apple.controlcenter NSStatusItem Visible Battery -bool true
 
 # Set the icon size of Dock items
 defaults write com.apple.dock tilesize -int 30
