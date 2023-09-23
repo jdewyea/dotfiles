@@ -1,14 +1,15 @@
 syntax on               " enable syntax highlighting
 set cursorline          " highlight the current line
-" set background=dark   " darker color scheme
-" set ruler             " show line number in bar
+set background=dark     " darker color scheme
+set ruler               " show line number in bar
 set nobackup            " don't create pointless backup files; Use VCS instead
 set autoread            " watch for file changes
 set number              " show line numbers
 set showcmd             " show selection metadata
 set showmode            " show INSERT, VISUAL, etc. mode
 set showmatch           " show matching brackets
-set autoindent smartindent  " auto/smart indent
+set smartcase           " case-insensitive search unless uppercase character is used
+set ignorecase          " case-insensitive search
 set smarttab            " better backspace and tab functionality
 set scrolloff=5         " show at least 5 lines above/below
 filetype on             " enable filetype detection
@@ -29,7 +30,6 @@ set shiftwidth=2        " 2 spaces for indentation
 
 " bells
 set noerrorbells        " turn off audio bell
-set visualbell          " but leave on a visual bell
 
 " search
 set hlsearch            " highlighted search results
@@ -43,9 +43,12 @@ set guioptions=aAace    " don't show scrollbar in MacVim
 set clipboard=unnamed   " allow yy, etc. to interact with OS X clipboard
 
 " shortcuts
-map <F2> :NERDTreeToggle<CR>
+" map <F2> :NERDTreeToggle<CR>
 
 " remapped keys
+let mapleader=","
+let g:mapleader=","
+
 inoremap {      {}<Left>
 inoremap {<CR>  {<CR>}<Esc>O
 inoremap {{     {
